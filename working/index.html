@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working | Smart Helmet for Rider Safety</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <h2>Smart Helmet</h2>
+        <p class="subtitle">Project Documentation</p>
+
+        <nav>
+            <a href="../">Home</a>
+            <a href="../about/">About</a>
+            <a href="../components/">Components</a>
+            <a href="../working/" class="active">Working</a>
+            <a href="../future/">Future Updates</a>
+            <a href="../team/">Meet the Team</a>
+            <a href="../achievements/">Achievements</a>
+            <a href="../gallery/">Project Gallery</a>
+        </nav>
+
+    </aside>
+
+    <main class="content">
+
+        <header>
+
+            <h1>Working Principle</h1>
+
+            <p class="tagline">
+                Step-by-step operation of the Smart Helmet for Rider Safety.
+            </p>
+
+        </header>
+
+        <section>
+
+            <h2>System Overview</h2>
+
+            <p>
+                The Smart Helmet for Rider Safety consists of two independent modules
+                powered by Arduino UNO R3 boards. The helmet-side module continuously
+                monitors the rider using multiple sensors, while the bike-side module
+                controls the motorcycle ignition through a relay. Both modules
+                communicate wirelessly using HC-05 Bluetooth modules configured in a
+                Master-Slave setup.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 1 - Bluetooth Connection & Helmet Detection</h2>
+
+            <p>
+                When the motorcycle ignition is switched on, the bike-side Arduino
+                powers up and waits for a Bluetooth connection from the helmet module.
+                The helmet module is powered independently using a rechargeable battery
+                pack.
+            </p>
+
+            <p>
+                Until a successful Bluetooth connection is established, the relay keeps
+                the ignition disabled. This ensures that the motorcycle cannot be
+                started unless the rider is wearing the helmet.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 2 - Alcohol Detection</h2>
+
+            <p>
+                After both modules are connected, the MQ3 alcohol sensor continuously
+                monitors the rider's breath for the presence of alcohol. If the
+                detected value exceeds the predefined threshold, the helmet module
+                immediately informs the bike module, which keeps the ignition relay in
+                the OFF state, preventing the motorcycle from starting.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 3 - Drowsiness Detection</h2>
+
+            <p>
+                During operation, the eyelid sensor continuously monitors the rider's
+                eye movement. If the rider's eyes remain closed beyond the configured
+                threshold, the system identifies this as a possible case of drowsiness.
+                The bike module then disables the ignition by switching the relay OFF.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 4 - Crash Detection</h2>
+
+            <p>
+                The MPU6050 continuously measures acceleration and gyroscopic data while
+                the motorcycle is in motion. If a sudden impact or abnormal change in
+                orientation exceeds the configured threshold, the event is classified as
+                a possible crash.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Step 5 - Emergency Alert</h2>
+
+            <p>
+                Once a crash has been detected, buzzers on both the helmet module and
+                the bike module are activated to alert nearby people. This audible alert
+                helps draw immediate attention to the rider and may assist in obtaining
+                faster emergency response.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Status Indication</h2>
+
+            <p>
+                Two LED indicators and a buzzer are used to provide visual and audible
+                feedback regarding the current operating state of the system. These
+                indicators assist the rider during startup and normal operation.
+            </p>
+
+            <table class="status-table">
+
+                <tr>
+                    <th>Indicator</th>
+                    <th>System Status</th>
+                </tr>
+
+                <tr>
+                    <td>🔴 Red LED + 🟢 Green LED ON</td>
+                    <td>Helmet and bike modules are powered on but Bluetooth pairing has not yet been established.</td>
+                </tr>
+
+                <tr>
+                    <td>🔴 Red LED ON</td>
+                    <td>The ignition relay remains OFF due to an unsafe condition such as unsuccessful Bluetooth pairing, alcohol detection, or drowsiness detection.</td>
+                </tr>
+
+                <tr>
+                    <td>🟢 Green LED ON</td>
+                    <td>The helmet and bike modules are successfully paired and the ignition relay is enabled, allowing the motorcycle to start.</td>
+                </tr>
+
+                <tr>
+                    <td>Single Buzzer Beep</td>
+                    <td>Indicates successful system power-on.</td>
+                </tr>
+
+                <tr>
+                    <td>Continuous Buzzer</td>
+                    <td>A possible crash has been detected. Both helmet and bike module buzzers are activated to alert nearby people.</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <footer>
+
+            <hr>
+
+            <p>
+                © 2026 Smart Helmet for Rider Safety | Project Documentation
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
