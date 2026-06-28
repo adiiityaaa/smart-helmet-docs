@@ -10,7 +10,7 @@ https://adiiityaaa.github.io/smart-helmet-docs/
 
 ## Project Team
 
-- Aditya Kokate
+- [Aditya Kokate](https://www.linkedin.com/in/aditya-kokate-0619b02b6/)
 - Neil Jadhav
 - Atharva Kulkarni
 - Bhargav Kulkarni
