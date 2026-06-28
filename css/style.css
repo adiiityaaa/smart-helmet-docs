@@ -16,6 +16,20 @@ body {
     line-height: 1.7;
 }
 
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+.gallery-image{
+    width:100%;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
 /* Sidebar */
 
 .sidebar {
