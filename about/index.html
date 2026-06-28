@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Smart Helmet for Rider Safety</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Smart Helmet</h2>
+        <p class="subtitle">Project Documentation</p>
+
+        <nav>
+            <a href="../">Home</a>
+            <a href="../about/" class="active">About</a>
+            <a href="../components/">Components</a>
+            <a href="../working/">Working</a>
+            <a href="../future/">Future Updates</a>
+            <a href="../team/">Meet the Team</a>
+            <a href="../achievements/">Achievements</a>
+            <a href="../gallery/">Project Gallery</a>
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="content">
+
+        <header>
+
+            <h1>About the Project</h1>
+
+            <p class="tagline">
+                Understanding the purpose, motivation and scope of the project.
+            </p>
+
+        </header>
+
+        <section>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                The <strong>Smart Helmet for Rider Safety</strong> is an embedded systems
+                project developed to improve motorcycle rider safety by ensuring that the
+                rider is in a suitable condition before and during the ride. The system
+                integrates multiple sensors, wireless communication and ignition control
+                into a single safety solution.
+            </p>
+
+            <p>
+                The project consists of two independent modules: a helmet-side module and
+                a bike-side module. The helmet module continuously monitors the rider,
+                while the bike module controls the motorcycle ignition. Both modules
+                communicate using HC-05 Bluetooth modules configured in a Master-Slave
+                setup, allowing them to exchange data in real time before and during the
+                ride.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Why is this Project Needed?</h2>
+
+            <p>
+                Road accidents involving two-wheelers continue to be a major concern,
+                with many incidents resulting from alcohol consumption, rider fatigue,
+                and failure to wear a helmet properly. Conventional helmets provide
+                protection only after an accident has occurred and are unable to monitor
+                the rider's condition or prevent unsafe riding behaviour.
+            </p>
+
+            <p>
+                The objective of this project is to transform a conventional helmet into
+                an active safety system capable of monitoring the rider before and during
+                the journey. By detecting unsafe conditions such as alcohol consumption
+                or drowsiness and preventing vehicle ignition when necessary, the system
+                aims to reduce the likelihood of accidents rather than only minimizing
+                their consequences.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Project Objectives</h2>
+
+            <ul>
+
+                <li>Ensure that the motorcycle can only be started when the rider is wearing the helmet.</li>
+
+                <li>Detect alcohol in the rider's breath using the MQ3 alcohol sensor and disable ignition if alcohol is detected.</li>
+
+                <li>Continuously monitor the rider for signs of drowsiness using an eyelid sensor.</li>
+
+                <li>Detect a possible accident using acceleration and gyroscopic data from the MPU6050 sensor.</li>
+
+                <li>Activate audible buzzers to alert nearby people in the event of a suspected crash.</li>
+
+                <li>Demonstrate the integration of multiple embedded systems and sensors into a single rider safety solution.</li>
+
+            </ul>
+
+        </section>
+
+        <section>
+
+            <h2>Project Scope</h2>
+
+            <p>
+                The current implementation focuses on alcohol detection, drowsiness
+                monitoring, crash detection, Bluetooth communication and ignition
+                control. The system demonstrates how multiple electronic modules can
+                work together to improve rider safety through real-time monitoring and
+                decision making.
+            </p>
+
+            <p>
+                The modular architecture also allows future integration of additional
+                features such as helmet strap detection, GPS-based location tracking,
+                GSM emergency notifications and cloud-based monitoring without major
+                hardware modifications.
+            </p>
+
+        </section>
+
+        <footer>
+
+            <hr>
+
+            <p>
+                © 2026 Smart Helmet for Rider Safety | Project Documentation
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
